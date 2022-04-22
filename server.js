@@ -43,6 +43,8 @@ app._router.use(function(req, res, next) {
   next();
 });
 
+const isLoggedIn = require('./config/auth');
+
 app.use('/', indexRouter);
 app.use('/recipes', recipesRouter);
 
