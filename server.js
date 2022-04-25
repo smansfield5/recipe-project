@@ -37,6 +37,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// ?
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 // Make user available within every EJS template
 app._router.use(function(req, res, next) {
   res.locals.user = req.user;
