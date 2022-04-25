@@ -6,12 +6,27 @@ const recipeSchema = new Schema({
         type: String,
         required: true
     },
+    // image: {
+    //     required: true
+    // },
+    description: {
+        type: String,
+        required: true
+    },
     difficultyLevel: {
         type: Number,
         min: 1,
         max: 5
     },
+    servings: {
+        type: Number,
+        required: true
+    },
     ingredientList: {
+        type: String,
+        required: true
+    },
+    directions: {
         type: String,
         required: true
     },

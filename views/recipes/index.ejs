@@ -1,20 +1,30 @@
 <%- include('../partials/header') %>
+
 <h1>Recipe List</h1>
-<section>
-    <a href="Apps">Apps</a>
-    <div id="1">Soup</div>
-    <div id="2">Salad</div>
-    <div id="3">Sandwiches</div>
-    <div id="4">Pot Roast</div>
-    <div id="5">Grilled Chicken</div>
-    <div id="6">Grilled Tri Tip</div>
-    <div id="7">Chicken Fajitas</div>
-    <div id="8">Mashed Potatoes</div>
-    <div id="9">Rissoto</div>
-    <div id="10">Chocolate Souffle</div>
-    <div id="11">Bourbon Bread Pudding</div>
-    <div id="12">Cheesecake</div>
-</section>
+<table id="list">
+    <thead>
+        <tr>
+            <th>Recipe:</th>
+            <th>Description:</th>
+            <th>Difficulty Level:</th>
+            <th>Ingredients:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% recipes.forEach(function(r) { %>
+        <tr>
+            <td><%= r.title %></td>
+            <td><%= r.image %></td>
+            <td><%= r.description %></td>
+            <td><%= r.difficultyLevel %></td>
+            <td><%= r.servings %></td>
+            <td><%= r.ingredientList %></td>
+            <td><%= r.directions %></td>
+        </tr>
+
+        <% }); %>
+    </tbody>
+</table>
 
 
 
