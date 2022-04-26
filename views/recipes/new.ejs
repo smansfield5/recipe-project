@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 
 <h2>Enter New Recipe</h2>
-<form id="new-form" action="/recipes" method="POST">
+<form id="new-form" action="/recipes" method="POST" class="recForm">
     <!-- <input type="image"> -->
     <label>Recipe Name:</label>
-        <input type="text" name="title" required>
+        <input type="text" name="title" required><br>
     
     <label for="description" >Description:</label>
-        <input type="text" name="description" required>
+        <input type="text" name="description" required><br>
     
     <label for="difficulty" >Difficulty Level:</label>
        <select id="" name="difficultyLevel" required>
@@ -16,16 +16,16 @@
            <option value="3">3</option>
            <option value="4">4</option>
            <option value="5">5</option>
-       </select>
+       </select><br>
     
     <label for="servings">Servings:</label>
-        <input type="number" name="servings" required>
+        <input type="number" name="servings" required><br>
     
     <label for="ingredients">Ingredient List:</label>
-        <input type="text" size="50" name="ingredientList" required>
+        <input type="text" size="50" name="ingredientList" required><br>
     
     <label for="directions">Cooking Directions:</label>
-        <input type="text" name="directions" required>
+        <input type="text" class="dir" name="directions" required><br>
     
     <input type="submit">
 </form>
