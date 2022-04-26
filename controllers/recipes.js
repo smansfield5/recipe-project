@@ -2,9 +2,10 @@ const Recipe = require('../models/recipe');
 
 module.exports = {
     index,
+    show,
     create,
     new: newRecipe,
-    //show
+    
 }
 
 function index(req, res) {
@@ -13,13 +14,13 @@ function index(req, res) {
     });
 }
 
-// function show(req, res) {
-//     Recipe.findById(req.params.id, function(err, recipe) {
-//         Recipe.find({recipe: recipe.id}, function(err, recipe) {
-//             res.render('recipes/show') 
-//         });
-//     }); 
-// }
+function show(req, res) {
+    Recipe.findById(req.params.id, function(err, recipe) {
+        res.render('recipes/show', { recipe })
+    });
+        
+}
+
 
 function create(req, res) {
     Recipe.create(req.body);
@@ -27,5 +28,6 @@ function create(req, res) {
 }
 
 function newRecipe(req, res) {
-    res.render('recipes/new')
+    
+    res.render('recipes/new', { title: 'add recipe' })
 }

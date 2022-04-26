@@ -1,32 +1,32 @@
 <%- include('../partials/header') %>
 
 <h2>Enter New Recipe</h2>
-<form action="/recipes" method="post">
+<form id="new-form" action="/recipes" method="POST">
     <!-- <input type="image"> -->
-    <label>Recipe Name:
-        <input type="text">
-    </label><br>
-    <label for="description">Description:
-        <input type="text">
-    </label><br>
-    <label for="difficulty">Difficulty Level:
-       <select name="dfficulty" id="">
+    <label>Recipe Name:</label>
+        <input type="text" name="title" required>
+    
+    <label for="description" >Description:</label>
+        <input type="text" name="description" required>
+    
+    <label for="difficulty" >Difficulty Level:</label>
+       <select id="" name="difficultyLevel" required>
            <option value="1">1</option>
            <option value="2">2</option>
            <option value="3">3</option>
            <option value="4">4</option>
            <option value="5">5</option>
        </select>
-    </label><br>
-    <label for="servings">Servings:
-        <input type="number">
-    </label><br>
-    <label for="ingredients">Ingredient List:
-        <input type="text" size="50">
-    </label><br>
-    <label for="directions">Cooking Directions:
-        <input type="text">
-    </label><br>
+    
+    <label for="servings">Servings:</label>
+        <input type="number" name="servings" required>
+    
+    <label for="ingredients">Ingredient List:</label>
+        <input type="text" size="50" name="ingredientList" required>
+    
+    <label for="directions">Cooking Directions:</label>
+        <input type="text" name="directions" required>
+    
     <input type="submit">
 </form>
 
