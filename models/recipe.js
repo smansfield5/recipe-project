@@ -1,9 +1,26 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
+const reviewSchema = new Schema({
+    content: {
+        type: String,
+    },
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5
+    },
+    user: {type: Schema.Types.ObjectId, ref: 'User', require: true},
+    userName: String,
+    userAvatar: String
+}, {
+    timestamps: true
+});
 
 const recipeSchema = new Schema({
+    recImg: {
+        
+    },
     title: {
         type: String,
         required: true
@@ -29,9 +46,12 @@ const recipeSchema = new Schema({
         type: String,
         required: true
     },
+    reviews: [reviewSchema]
 }, {
     timestamps: true
 });
+
+
 
 
 module.exports = mongoose.model('Recipe', recipeSchema);

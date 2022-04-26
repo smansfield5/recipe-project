@@ -52,3 +52,8 @@ div > img {
   width: 300px;
   margin-top: 6px;
 }
+
+.recImg {
+  height: 100px;
+  width: 100px;
+}

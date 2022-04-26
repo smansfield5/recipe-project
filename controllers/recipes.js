@@ -28,6 +28,5 @@ function create(req, res) {
 }
 
 function newRecipe(req, res) {
-    
     res.render('recipes/new', { title: 'add recipe' })
 }
