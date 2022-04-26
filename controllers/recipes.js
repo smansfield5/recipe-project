@@ -23,8 +23,10 @@ function show(req, res) {
 
 
 function create(req, res) {
-    Recipe.create(req.body);
+    req.body.user = req.user._id;
+    Recipe.create(req.body, function(err, recipe) {
     res.redirect('/recipes');
+    });
 }
 
 function newRecipe(req, res) {

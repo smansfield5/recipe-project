@@ -18,6 +18,11 @@ const reviewSchema = new Schema({
 });
 
 const recipeSchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
     recImg: {
         
     },
