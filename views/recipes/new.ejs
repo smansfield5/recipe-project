@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-
-<h2>Add New Recipe</h2>
+<br>
+<h2 id="desInput">Add New Recipe</h2>
 <form id="new-form" action="/recipes" method="POST" class="recForm">
     <label for="recImg">Add Picture:</label>
 
@@ -8,7 +8,7 @@
        id="imageFile" name="recImg">
     
     <label for="description" >Description:</label>
-        <input type="text" name="description" required><br>
+        <input type="text" name="description" required>
     
     <label for="difficulty" >Difficulty Level:</label>
        <select id="diff" name="difficultyLevel" required>
@@ -17,21 +17,21 @@
            <option value="3">3</option>
            <option value="4">4</option>
            <option value="5">5</option>
-       </select><br>
+       </select>
        
 
     <label for="servings">Servings:</label>
-        <input type="number" name="servings" required><br>
+        <input type="number" name="servings" required>
     
-    <label for="ingredients">Ingredient List:</label><br>
-    <textarea name="ingredientList" id="" cols="30" rows="10"></textarea><br><br>
+    <label for="ingredients">Ingredient List:</label>
+    <textarea name="ingredientList" id="" cols="30" rows="10"></textarea>
         
     
-    <label for="directions">Cooking Directions:</label><br>
-    <textarea name="directions" id="" cols="30" rows="10"></textarea><br><br>
+    <label for="directions">Cooking Directions:</label>
+    <textarea name="directions" id="" cols="30" rows="10"></textarea><br>
         
     
-    <input type="submit">
+    <input type="submit"><br>
 </form>
 
 <%- include('../partials/footer') %>

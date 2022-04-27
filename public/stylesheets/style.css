@@ -23,7 +23,7 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 75%;
   margin-top: 30px;
   border: 10px, solid black;
 }
@@ -70,6 +70,7 @@ div > img {
   height: 50px;
   color:blue;
   font-size: 20px;
+  
 }
 
 #revSec {
@@ -82,6 +83,7 @@ div > img {
 #show-page {
   display: grid;
   font-size: 40px;
+  justify-self: center;
 }
 
 #diff {
@@ -95,24 +97,45 @@ div > img {
   justify-content: center;
   align-self: center;
   font-size: 30px;
+  justify-self: center;
   
 }
 
 #list {
   font-size: 30px;
+  display: grid;
   justify-content: center;
-  align-content: center;
+}
+
+#idxDes {
+  padding: 0px 30px 0px 30px;
 }
 
 #add-review {
   font-size: 30px;
+  display: grid;
+  justify-content: center;
 }
 
 #description {
   text-decoration: underline;
+  justify-self: center;
+}
+
+#desInput {
+  justify-self: center;
+  font-size: 50px;
 }
 
 .new {
+  font-size: 50px;
   text-decoration: underline;
   padding-top: 20px;
+  justify-self: center;
+}
+
+.revName {
+  font-size: 30px;
+  text-decoration: underline;
+  justify-self: center;
 }

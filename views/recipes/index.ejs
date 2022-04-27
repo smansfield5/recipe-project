@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-
+<br>
     <h1 class="new">Recipe Index</h1>
     <table id="list">
         <thead>
@@ -15,10 +15,11 @@
                         <img class="idxImg" src="<%= r.recImg %>">
                         
                     </td>
-                    <td>
+                    <td id="idxDes">
                          <%= r.description %>
                     </td>
                     <td><a href="/recipes/<%= r.id %>">Details</a></td>
+                    <td colspan="3"></td>
                 </tr>
 
                 <% }); %>

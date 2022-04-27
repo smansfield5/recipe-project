@@ -1,28 +1,28 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <br>
+    <br><br>
     <div>
       <img class="recImg" src="<%= recipe.recImg %>">
     </div>
     <div id="description">Description</div>
-    <div> 
+    <div id="desInput"> 
         <%= recipe.description %>
     </div>
     <div id="description">Difficulty Level</div>
-    <div>
+    <div id="desInput">
         <%= recipe.difficultyLevel %>
     </div>
     <div id="description">Servings</div>
-    <div>
+    <div id="desInput">
         <%= recipe.servings %>
     </div>
     <div id="description">Ingredient List</div>
-    <div>
+    <div id="desInput">
         <%= recipe.ingredientList %>
     </div>
     <div id="description">Cooking Directions</div>
-    <div>
+    <div id="desInput">
         <%= recipe.directions %>
     </div>
 </section>
@@ -30,18 +30,18 @@
 
 
 <% if (user) { %>
-    <form id="add-review" method="POST" action="/recipes/<%= recipe._id %>/reviews">
-        <label for="reviews">Add User Review</label><br>
-        <textarea name="content" id="" cols="30" rows="10"></textarea><br><br>
+    <form class="revName"  id="add-review" method="POST" action="/recipes/<%= recipe._id %>/reviews">
+        <label id="desInput" for="reviews">Add User Review</label>
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
 
-        <label for="reviews">Rating</label>
+        <label class="revName" for="reviews">Rating</label>
         <select name="rating">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-          </select><br><br>
+          </select><br>
          
           <input type="submit" value="Submit Review">
     </form>
