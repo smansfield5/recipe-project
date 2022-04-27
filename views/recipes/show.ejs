@@ -3,7 +3,7 @@
 <section id="show-page">
     <div>Recipe</div>
     <div>
-        <%= recipe.recImg %>
+      <img class="recImg" src="<%= recipe.recImg %>">
     </div>
     <div>
         <%= recipe.title %>
@@ -34,9 +34,10 @@
 <div>Reviews</div>
 <% if (user) { %>
     <form id="add-review" method="POST" action="/recipes/<%= recipe._id %>/reviews">
-        <label for="review">User Review</label><br>
+        <label for="reviews">User Review</label><br>
         <textarea name="content" id="" cols="30" rows="10"></textarea><br><br>
-        <label for="review">Rating</label>
+
+        <label for="reviews">Rating</label>
         <select name="rating">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -44,6 +45,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select><br><br>
+         
           <input type="submit" value="Submit Review">
     </form>
 <% } %>
@@ -60,24 +62,24 @@
               </thead>
               <tbody>
                   <% let total = 0 %>
-                    <% recipe.reviews.forEach(function(r) {  %> 
-                        <% total += r.rating %>
+                    <% recipe.reviews.forEach(function(u) {  %> 
+                        <% total += u.rating %>
                          <tr>
-                             <td class="user-review"><img src="<%= r.userAvatar %>" alt="avatar">
-                                <%= r.userName %>
+                             <td class="user-review"><img src="<%= u.userAvatar %>" alt="avatar">
+                                <%= u.userName %>
                             </td>
                             <td>
-                                <%= r.createdAt.toLocaleDateString() %>
+                                <%= u.createdAt.toLocaleDateString() %>
                             </td>
                             <td>
-                                <%= r.content %>
+                                <%= u.content %>
                             </td>
                             <td>
-                                <%= r.rating %>
+                                <%= u.rating %>
                             </td>
                             <td>
-                                <% if (user && user._id.equals(r.user)) { %>
-                                    <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                                <% if (user && user._id.equals(u.user)) { %>
+                                    <form action="/reviews/<%= u._id %>?_method=DELETE" method="POST">
                                         <button type="submit">Delete</button>
                                     </form>
                                     <% } %>

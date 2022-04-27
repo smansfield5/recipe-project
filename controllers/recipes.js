@@ -18,7 +18,6 @@ function show(req, res) {
     Recipe.findById(req.params.id, function(err, recipe) {
         res.render('recipes/show', { recipe })
     });
-        
 }
 
 
