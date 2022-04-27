@@ -1,8 +1,6 @@
 body {
   padding: 50px;
   font-family: 'Nanum Pen Script', cursive;
-  /* font-size: 40px; */
-  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: beige;
   display: grid;
 }
@@ -36,7 +34,6 @@ div > img {
 #header {
   border: 3px solid none;
   height: 70px;
-  display: inline;
   text-align: center;
   margin: auto;
   position: relative;
@@ -62,8 +59,9 @@ div > img {
 }
 
 .idxImg {
-  height: 100px;
-  width: 100px
+  height: 225px;
+  width: 225px;
+  padding-right: 10px;
 }
 
 .user-review {
@@ -86,10 +84,6 @@ div > img {
   font-size: 40px;
 }
 
-#new-form {
-  font-size: 30px;
-}
-
 #diff {
   width: 50px;
   height: 25px;
@@ -100,16 +94,25 @@ div > img {
   width: 50%;
   justify-content: center;
   align-self: center;
-}
-
-#list, #add-review {
-  font-size: 30px;;
-}
-
-/* #add-review {
   font-size: 30px;
-} */
+  
+}
+
+#list {
+  font-size: 30px;
+  justify-content: center;
+  align-content: center;
+}
+
+#add-review {
+  font-size: 30px;
+}
 
 #description {
   text-decoration: underline;
+}
+
+.new {
+  text-decoration: underline;
+  padding-top: 20px;
 }

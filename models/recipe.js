@@ -26,10 +26,6 @@ const recipeSchema = new Schema({
     recImg: {
         
     },
-    title: {
-        type: String,
-        required: true
-    },
     description: {
         type: String,
         required: true

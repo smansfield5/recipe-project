@@ -1,15 +1,11 @@
 <%- include('../partials/header') %>
 
-<h2>Enter New Recipe</h2>
+<h2>Add New Recipe</h2>
 <form id="new-form" action="/recipes" method="POST" class="recForm">
     <label for="recImg">Add Picture:</label>
 
 <input type="text"
-       id="imageFile" name="recImg" 
-       ><br>
-    <!-- <label>Recipe Name:</label>
-    
-        <input type="text" name="title" required><br> -->
+       id="imageFile" name="recImg">
     
     <label for="description" >Description:</label>
         <input type="text" name="description" required><br>
