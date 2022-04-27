@@ -80,7 +80,7 @@
                             <td>
                                 <% if (user && user._id.equals(u.user)) { %>
                                     <form action="/reviews/<%= u._id %>?_method=DELETE" method="POST">
-                                        <button type="submit">Delete</button>
+                                        <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
                                     </form>
                                     <% } %>
                             </td>

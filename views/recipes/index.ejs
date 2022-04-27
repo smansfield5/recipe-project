@@ -4,45 +4,30 @@
     <table id="list">
         <thead>
             <tr>
+                <th></th>
                 <th>Recipe:</th>
                 <th>Description:</th>
-                <th>Difficulty Level:</th>
-                <th>Ingredients:</th>
             </tr>
         </thead>
         <tbody>
             <% recipes.forEach(function(r) { %>
                 <tr>
+                    
+                    <td>
+                        <img class="idxImg" src="<%= r.recImg %>">
+                        
+                    </td>
                     <td>
                         <%= r.title %>
                     </td>
                     <td>
-                        <%= r.image %>
-                    </td>
-                    <td>
-                        <%= r.description %>
-                    </td>
-                    <td>
-                        <%= r.difficultyLevel %>
-                    </td>
-                    <td>
-                        <%= r.servings %>
-                    </td>
-                    <td>
-                        <%= r.ingredientList %>
-                    </td>
-                    <td>
-                        <%= r.directions %>
+                         <%= r.description %>
                     </td>
                     <td><a href="/recipes/<%= r.id %>">Details</a></td>
                 </tr>
 
                 <% }); %>
-                <!-- <tr>
-                    <td colspan="4"></td>
-                    <td><strong>
-                      </strong></td>
-                  </tr> -->
+                
         </tbody>
     </table>
 
