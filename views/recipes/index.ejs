@@ -5,20 +5,15 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Recipe:</th>
                 <th>Description:</th>
             </tr>
         </thead>
         <tbody>
             <% recipes.forEach(function(r) { %>
                 <tr>
-                    
                     <td>
                         <img class="idxImg" src="<%= r.recImg %>">
                         
-                    </td>
-                    <td>
-                        <%= r.title %>
                     </td>
                     <td>
                          <%= r.description %>

@@ -1,7 +1,10 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Pen Script', cursive;
+  /* font-size: 40px; */
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   background-color: beige;
+  display: grid;
 }
 
 a {
@@ -15,7 +18,7 @@ a {
 }
 
 .login img {
-  height: 30px;
+  height: 38px;
 }
 
 .mainImgs {
@@ -31,13 +34,13 @@ div > img {
 }
 
 #header {
-  font-size: 30px;
-  border: 3px solid gray;
-  height: 60px;
+  border: 3px solid none;
+  height: 70px;
   display: inline;
   text-align: center;
   margin: auto;
   position: relative;
+  font-size: 60px;
 }
 
 .recForm {
@@ -63,4 +66,50 @@ div > img {
   width: 100px
 }
 
+.user-review {
+  grid-template-columns: 100px 50px 100px;
+  align-items: center;
+  height: 50px;
+  color:blue;
+  font-size: 20px;
+}
 
+#revSec {
+  height: 50px;
+  grid-template-columns: 100px 50px 100px;
+  align-items: baseline;
+
+} 
+
+#show-page {
+  display: grid;
+  font-size: 40px;
+}
+
+#new-form {
+  font-size: 30px;
+}
+
+#diff {
+  width: 50px;
+  height: 25px;
+}
+
+#new-form {
+  display: grid;
+  width: 50%;
+  justify-content: center;
+  align-self: center;
+}
+
+#list, #add-review {
+  font-size: 30px;;
+}
+
+/* #add-review {
+  font-size: 30px;
+} */
+
+#description {
+  text-decoration: underline;
+}

@@ -1,40 +1,37 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-    <div>Recipe</div>
+    <br>
     <div>
       <img class="recImg" src="<%= recipe.recImg %>">
     </div>
-    <div>
-        <%= recipe.title %>
-    </div>
-    <div>Description</div>
-    <div>
+    <div id="description">Description</div>
+    <div> 
         <%= recipe.description %>
     </div>
-    <div>Difficulty Level</div>
+    <div id="description">Difficulty Level</div>
     <div>
         <%= recipe.difficultyLevel %>
     </div>
-    <div>Servings</div>
+    <div id="description">Servings</div>
     <div>
         <%= recipe.servings %>
     </div>
-    <div>Ingredient List</div>
+    <div id="description">Ingredient List</div>
     <div>
         <%= recipe.ingredientList %>
     </div>
-    <div>Cooking Directions</div>
+    <div id="description">Cooking Directions</div>
     <div>
         <%= recipe.directions %>
     </div>
 </section>
 <br><br>
 
-<div>Reviews</div>
+
 <% if (user) { %>
     <form id="add-review" method="POST" action="/recipes/<%= recipe._id %>/reviews">
-        <label for="reviews">User Review</label><br>
+        <label for="reviews">Add User Review</label><br>
         <textarea name="content" id="" cols="30" rows="10"></textarea><br><br>
 
         <label for="reviews">Rating</label>
@@ -51,7 +48,7 @@
 <% } %>
 
     <% if (recipe.reviews.length) { %>
-        <table>
+        <table id="add-review">
             <thead>
                 <tr>
                   <th>User</th>
@@ -64,8 +61,8 @@
                   <% let total = 0 %>
                     <% recipe.reviews.forEach(function(u) {  %> 
                         <% total += u.rating %>
-                         <tr>
-                             <td class="user-review"><img src="<%= u.userAvatar %>" alt="avatar">
+                         <tr> 
+                             <td class="user-review"><img src="<%= u.userAvatar %>" referrerpolicy="no-referrer" alt="avatar">
                                 <%= u.userName %>
                             </td>
                             <td>
