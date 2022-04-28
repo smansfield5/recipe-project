@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+<br>
+<h2 id="desInput">Add New Recipe</h2>
+<form id="new-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST" class="recForm">
+    <label for="recImg">Add Picture:</label>
+
+<input type="text"
+       id="imageFile" name="recImg" value="<%= recipe.recImg %>">
+    
+    <label for="description" >Description:</label>
+        <input type="text" name="description" required value="<%= recipe.description %>">
+    
+    <label for="difficulty" >Difficulty Level:</label>
+       <select id="diff" name="difficultyLevel" required value="<%= recipe.difficultyLevel %>">
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+       </select>
+       
+
+    <label for="servings">Servings:</label>
+        <input type="number" name="servings" required value="<%= recipe.servings %>">
+    
+    <label for="ingredients">Ingredient List:</label>
+    <textarea name="ingredientList" id="" cols="30" rows="10" ><%= recipe.ingredientList %></textarea>
+        
+    
+    <label for="directions">Cooking Directions:</label>
+    <textarea name="directions" id="" cols="30" rows="10"><%= recipe.directions %></textarea><br>
+        
+    
+    <input type="submit"><br>
+</form>
+
+<%- include('../partials/footer') %>

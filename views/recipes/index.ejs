@@ -19,6 +19,16 @@
                          <%= r.description %>
                     </td>
                     <td><a href="/recipes/<%= r.id %>">Details</a></td>
+                    <td>
+                        <% if (user && user._id.equals(r.user)) { %>
+                            <form action="/recipes/<%= r._id %>?_method=DELETE" method="POST">
+                                <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
+                            </form>
+                            <% } %>
+                    </td>
+                    <!-- <td>
+                        <a href="/recipes/<%= r.id %>/update">Update Recipe</a>
+                    </td> -->
                     <td colspan="3"></td>
                 </tr>
 
