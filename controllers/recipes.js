@@ -55,10 +55,8 @@ function deleteRec(req, res, next) {
 
 
 function update(req, res) {
-    console.log(req.body)
     Recipe.findOneAndUpdate({'recipe._id': req.params.id, 'recipe.user': req.user._id}, req.body, {new: true}, function(err, recipe) {
         if (err || !recipe) return res.redirect('/recipes');
-            console.log(err)
             res.redirect(`/recipes/${recipe._id}`)
         
     });

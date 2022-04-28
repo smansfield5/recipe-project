@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 <br>
     <h1 class="new">Recipe Index</h1>
-    <table id="list">
-        <thead>
+    <table id="list"><br>
+        <!-- <thead>
             <tr>
                 <th></th>
                 <th class="new">Description:</th>
             </tr>
-        </thead>
+        </thead> -->
         <tbody>
             <% recipes.forEach(function(r) { %>
                 <tr>
@@ -19,15 +19,12 @@
                          <%= r.description %>
                     </td>
                     <td><a href="/recipes/<%= r.id %>">Details</a></td>
-                    <td>
+                    <!-- <td>
                         <% if (user && user._id.equals(r.user)) { %>
                             <form action="/recipes/<%= r._id %>?_method=DELETE" method="POST">
                                 <button type="submit"><i class="fa-solid fa-trash-can"></i></button>
                             </form>
                             <% } %>
-                    </td>
-                    <!-- <td>
-                        <a href="/recipes/<%= r.id %>/update">Update Recipe</a>
                     </td> -->
                     <td colspan="3"></td>
                 </tr>

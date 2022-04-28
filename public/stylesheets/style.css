@@ -3,6 +3,7 @@ body {
   font-family: 'Nanum Pen Script', cursive;
   background-color: beige;
   display: grid;
+  justify-self: center;
 }
 
 a {
@@ -32,6 +33,7 @@ div > img {
 }
 
 #header {
+  display: inline;
   border: 3px solid none;
   height: 70px;
   text-align: center;
@@ -56,6 +58,10 @@ div > img {
 .recImg {
   height: 400px;
   width: 400px;
+  justify-self: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .idxImg {
@@ -98,7 +104,7 @@ div > img {
   align-self: center;
   font-size: 30px;
   justify-self: center;
-  
+  background-color: rgb(113, 159, 202);
 }
 
 #list {
@@ -109,6 +115,7 @@ div > img {
 
 #idxDes {
   padding: 0px 30px 0px 30px;
+  justify-self: center;
 }
 
 #add-review {
@@ -127,10 +134,16 @@ div > img {
   font-size: 50px;
 }
 
+#desHead {
+  justify-self: center;
+  font-size: 50px;
+  text-decoration: underline;
+}
 .new {
   font-size: 50px;
   text-decoration: underline;
   padding-top: 20px;
+  align-self: center;
   justify-self: center;
 }
 
@@ -139,3 +152,4 @@ div > img {
   text-decoration: underline;
   justify-self: center;
 }
+
