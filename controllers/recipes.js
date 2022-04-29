@@ -41,7 +41,7 @@ function newRecipe(req, res) {
 }
 
 function update(req, res) {
-    Recipe.findOneAndUpdate({'recipe._id': req.params.id, 'recipe.user': req.user._id}, req.body, {new: true}, function(err, recipe) {
+    Recipe.findOneAndUpdate({_id: req.params.id, user: req.user._id}, req.body, {new: true}, function(err, recipe) {
         if (err || !recipe) return res.redirect('/recipes');
             res.redirect(`/recipes/${recipe._id}`)
         
