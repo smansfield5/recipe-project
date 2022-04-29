@@ -5,7 +5,6 @@ module.exports = {
     show,
     create,
     new: newRecipe,
-    delete: deleteRec,
     edit,
     update
 }
@@ -40,19 +39,6 @@ function create(req, res) {
 function newRecipe(req, res) {
     res.render('recipes/new', { title: 'add recipe' })
 }
-
-function deleteRec(req, res, next) {
-    Recipe.findById({'recipe.id': req.body.id, 'recipe.user': req.user.id}).then(function(recipe) {
-        if (!recipe) return res.redirect('/recipes');
-        recipe.remove(req.body.id);
-        recipe.save().then(function() {
-            res.redirect('/recipes');
-        }).catch(function(err) {
-            return next(err)
-        })
-    })
-}
-
 
 function update(req, res) {
     Recipe.findOneAndUpdate({'recipe._id': req.params.id, 'recipe.user': req.user._id}, req.body, {new: true}, function(err, recipe) {

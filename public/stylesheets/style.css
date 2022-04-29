@@ -70,15 +70,6 @@ div > img {
   padding-right: 10px;
 }
 
-.user-review {
-  grid-template-columns: 100px 50px 100px;
-  align-items: center;
-  height: 50px;
-  color:blue;
-  font-size: 20px;
-  
-}
-
 #revSec {
   height: 50px;
   grid-template-columns: 100px 50px 100px;
@@ -118,10 +109,25 @@ div > img {
   justify-self: center;
 }
 
+.user-review {
+  /* display: block;
+  align-items: center; */
+  /* padding: 5px; */
+  height: 30px;
+  color:blue;
+
+}
+
 #add-review {
   font-size: 30px;
-  display: grid;
+  display: block;
   justify-content: center;
+  justify-self: center;
+  /* width: 60%; */
+}
+
+#reviewHeader {
+  display:grid;
 }
 
 #description {

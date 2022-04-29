@@ -33,7 +33,7 @@
 
 
     <% if (user) { %>
-        <form class="revName" id="add-review" method="POST" action="/recipes/<%= recipe._id %>/reviews">
+        <form class="revName" id="reviewHeader" method="POST" action="/recipes/<%= recipe._id %>/reviews">
             <label id="desInput" for="reviews">Add User Review</label>
             <textarea name="content" id="" cols="30" rows="10"></textarea>
 
@@ -47,7 +47,7 @@
             </select><br>
 
             <input type="submit" value="Submit Review">
-        </form>
+        </form><br>
         <% } %>
 
             <% if (recipe.reviews.length) { %>
@@ -65,7 +65,7 @@
                             <% recipe.reviews.forEach(function(u) { %>
                                 <% total +=u.rating %>
                                     <tr>
-                                        <td class="user-review"><img src="<%= u.userAvatar %>"
+                                        <td><img class="user-review" src="<%= u.userAvatar %>"
                                                 referrerpolicy="no-referrer" alt="avatar">
                                             <%= u.userName %>
                                         </td>
@@ -96,7 +96,7 @@
                     </tbody>
                 </table>
                 <% } else { %>
-                    <h5>No Reviews</h5>
+                    <h5 class="revName">Be the first to leave a review</h5>
                     <% } %>
 
 
